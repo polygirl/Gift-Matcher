@@ -49,6 +49,8 @@
     <h1>More Cake!</h1>
     <div id="cakeList"></div>
       <script>
+        var people = [];
+        var unallocatedPeople = [];
         var iqfyPeople = [];
           iqfyPeople.push({name: 'Paulene', birthday: '18 July', dietaryReqs: 'No pref'})
           iqfyPeople.push({name: 'Klaus', birthday: '23 July', dietaryReqs: 'No pref'}),
@@ -74,10 +76,10 @@
           iqfyPeople.push({name: 'Bindy', birthday: '30 June', dietaryReqs: 'Dairy Free'}),
           iqfyPeople.push({name: 'Vicken', birthday: '11 July', dietaryReqs: 'No pref'})
       
-        var people = ['Paulene', 'Klaus', 'Jean', 'Harpreet', 'Sue', 'Kyle', 'Brad', 'Filype', 'Joe', 'Sarika', 'Shanan', 'Rob', 
-        'Jory', 'Becs', 'Christine', 'Vicky', 'Caitlin', 'Thel', 'Sam G', 'Rachael', 'Dom', 'Bindy', 'Vicken'];
-        var unallocatedPeople = ['Paulene', 'Klaus', 'Jean', 'Harpreet', 'Sue', 'Kyle', 'Brad', 'Filype', 'Joe', 'Sarika', 'Shanan', 'Rob', 
-        'Jory', 'Becs', 'Christine', 'Vicky', 'Caitlin', 'Thel', 'Sam G', 'Rachael', 'Dom', 'Bindy', 'Vicken'];
+          iqfyPeople.forEach(function(person) {
+            people.push(person.name);
+            unallocatedPeople.push(person.name);
+          }); 
 
         var pair = function(namesArray) {
           var result = [];
