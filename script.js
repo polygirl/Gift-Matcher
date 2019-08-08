@@ -33,9 +33,7 @@ function makeMatches(){
 
   var pair = function(namesArray) {
     var result = [];
-    var namesArrayLength = namesArray.length;
-    for (var i = 0; i < namesArrayLength; i++) {
-      var sender = namesArray[i];	
+    namesArray.forEach(function(sender) {
       var recipientIndex = Math.floor(Math.random() * unallocatedPeople.length);
       while (unallocatedPeople[recipientIndex] === sender) {
         // Can't send gift to myself
@@ -44,12 +42,12 @@ function makeMatches(){
       var recipientName = unallocatedPeople.splice(recipientIndex, 1)[0];
       var recipientFullInfo = iqfyPeople.find((person) => {
         return person.name === recipientName
-      })
+      });
       result.push({
         sender: sender,
         receiver: recipientFullInfo,
-      });
-    }
+      })
+    });
     return result;
   };
 
