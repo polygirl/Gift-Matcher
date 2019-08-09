@@ -7,7 +7,7 @@ function makeMatches(){
     iqfyPeople.push({name: 'Jean', birthday: '31 July', dietaryReqs: 'No pref'}),
     iqfyPeople.push({name: 'Harpreet', birthday: '8 August', dietaryReqs: 'No pref'}),
     iqfyPeople.push({name: 'Sue', birthday: '6 September', dietaryReqs: 'Gluten free'}),
-    iqfyPeople.push({name: 'Kyle', birthday: '9 September', dietaryReqs: 'Probably keto'}),
+    iqfyPeople.push({name: 'Kyle with a really really really long name', birthday: '9 September', dietaryReqs: 'Probably keto'}),
     iqfyPeople.push({name: 'Brad', birthday: '9 September', dietaryReqs: 'Banana cake, choc icing'}),
     iqfyPeople.push({name: 'Filype', birthday: '4 October', dietaryReqs: 'No pref'}),
     iqfyPeople.push({name: 'Joe', birthday: '5 November', dietaryReqs: 'No pref'}),
@@ -52,10 +52,10 @@ function makeMatches(){
   };
 
   var pairs = pair(people);
-  var printResult = "<ul><li><div class=header><span class='sender'>Sender </span><span class='recipient'>Recipient </span><span class='birthday'>Birthday </span><span class='diet'>Dietary Reqs</span></div>"
+  var printResult = "<ul><li><div class=header><div class='sender'>Sender </div><div class='recipient'>Recipient </div><div class='birthday'>Birthday </div><div class='diet'>Dietary Reqs</div></div>"
 
   pairs.forEach(function(person) {
-    printResult += "<li><span class='sender'>" + person.sender +  "</span><span class='recipient'>" + person.receiver.name + "</span><span class='birthday'>" + person.receiver.birthday + "</span><span class='diet'>" + person.receiver.dietaryReqs + "</span></li>";
+    printResult += "<li><div class='sender'>" + person.sender +  "</div><div class='recipient'>" + person.receiver.name + "</div><div class='birthday'>" + person.receiver.birthday + "</div><div class='diet'>" + person.receiver.dietaryReqs + "</div></li>";
   }); 
 
   printResult += "</ul>";

@@ -16,24 +16,10 @@ ul {
 }
 
 /* TO-DO: figure out max width and space these using variables instead of magic numbers  */
-.sender {
-  position:absolute;
-  left: 5px;
-}
-
-.recipient{
-  position: absolute;
-  left: 205px;
-}
-
-.birthday{
-  position: absolute;
-  left: 405px;
-}
-
-.diet{
-  position: absolute;
-  left: 605px;
+.sender, .recipient, .birthday, .diet {
+  position:relative;
+  /* left: 5px; */
+  display:inline-block;
 }
 
 li {
