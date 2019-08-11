@@ -52,12 +52,12 @@ function makeMatches(){
   };
 
   var pairs = pair(people);
-  var printResult = "<ul><li><div class=header><div class='sender'>Sender </div><div class='recipient'>Recipient </div><div class='birthday'>Birthday </div><div class='diet'>Dietary Reqs</div></div>"
+  var printResult = "<table><thead><tr><th>Sender</th><th>Recipient</th><th>Birthday</th><th>Dietary Reqs</th></tr></thead><tbody>"
 
   pairs.forEach(function(person) {
-    printResult += "<li><div class='sender'>" + person.sender +  "</div><div class='recipient'>" + person.receiver.name + "</div><div class='birthday'>" + person.receiver.birthday + "</div><div class='diet'>" + person.receiver.dietaryReqs + "</div></li>";
+    printResult += "<tr><td>" + person.sender +  "</td><td'>" + person.receiver.name + "</td><td>" + person.receiver.birthday + "</td><td>" + person.receiver.dietaryReqs + "</td></tr>";
   }); 
 
-  printResult += "</ul>";
+  printResult += "</tbody></table>";
   document.getElementById('matchList').innerHTML = printResult;
 }
