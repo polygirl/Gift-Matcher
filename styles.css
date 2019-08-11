@@ -1,27 +1,35 @@
 
 body {
-  font-family: Helvetica;
+  font-family: helvetica;
 }
 
-ul {
-  list-style-type: none;
-  line-height: 24px;
-  margin: 0;
-  padding: 0;
+table {
+  width: 100%;
+  border: 1px;
+  border-collapse: collapse;
 }
 
-.header {
+tr:hover td{
+  color: #669 !important;
+}
+
+tr:nth-child(even) {
+  background: #f7f7f7;
+}
+
+tr:nth-child(odd) {
+  background: #FFF;
+}
+
+thead {
   line-height: 24px;
   font-weight: bold;
+  text-align: left;
+  border-bottom: 2px solid #669;
+  color: #669;
 }
 
-/* TO-DO: figure out max width and space these using variables instead of magic numbers  */
-.sender, .recipient, .birthday, .diet {
-  position:relative;
-  /* left: 5px; */
-  display:inline-block;
-}
-
-li {
-  padding: 15px;
+td {
+  border-bottom: 1px solid #669;
+  color: #99d;
 }

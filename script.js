@@ -55,7 +55,7 @@ function makeMatches(){
   var printResult = "<table><thead><tr><th>Sender</th><th>Recipient</th><th>Birthday</th><th>Dietary Reqs</th></tr></thead><tbody>"
 
   pairs.forEach(function(person) {
-    printResult += "<tr><td>" + person.sender +  "</td><td'>" + person.receiver.name + "</td><td>" + person.receiver.birthday + "</td><td>" + person.receiver.dietaryReqs + "</td></tr>";
+    printResult += "<tr><td>" + person.sender +  "</td><td>" + person.receiver.name + "</td><td>" + person.receiver.birthday + "</td><td>" + person.receiver.dietaryReqs + "</td></tr>";
   }); 
 
   printResult += "</tbody></table>";
