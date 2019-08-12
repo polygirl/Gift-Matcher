@@ -3,6 +3,25 @@ body {
   font-family: helvetica;
 }
 
+
+#input{
+  width: 50%;
+  position: relative;
+  display: inline-block;
+}
+
+#names{
+  width: 100%;
+  height: 100px;
+}
+
+button{
+  float: right;
+  display: block;
+  padding: 5px;
+  margin: 5px;
+}
+
 table {
   width: 100%;
   border: 1px;

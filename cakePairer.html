@@ -4,8 +4,16 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="script.js"></script>
   </head>
-  <body onload=makeMatches()>
-    <h1>Random matches</h1>
+  <body>
+    <h1>Random matcher</h1>
+    <div id="input">
+      <p>
+        Enter a list of names to start the matching process.  
+        Each person will be randomly matched with one other person from the list.
+      </p>
+      <textarea id="names"></textarea>
+          <button type="button" onclick=makeMatches()>Match</button>
+    </div>
     <div id="matchList"></div>
   </body>
 </html>
